@@ -1,9 +1,6 @@
 package org.launchcode.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import java.util.List;
@@ -35,6 +32,8 @@ public class Menu {
     public void addItem(Cheese item) {
         cheeses.add(item);
     }
+
+    public void delItem(Cheese item) { cheeses.remove(item);}
 
     //getters & setters
     public int getId() {
